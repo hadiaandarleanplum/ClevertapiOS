@@ -1,0 +1,6 @@
+framework module Pods_ClevertapiOS_ClevertapiOSUITests {
+  umbrella header "Pods-ClevertapiOS-ClevertapiOSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

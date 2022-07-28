@@ -1,0 +1,769 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		76A7FB85288613E20049E19A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A7FB84288613E20049E19A /* AppDelegate.swift */; };
+		76A7FB87288613E20049E19A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A7FB86288613E20049E19A /* SceneDelegate.swift */; };
+		76A7FB89288613E20049E19A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A7FB88288613E20049E19A /* ViewController.swift */; };
+		76A7FB8C288613E20049E19A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A7FB8A288613E20049E19A /* Main.storyboard */; };
+		76A7FB8E288613E60049E19A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76A7FB8D288613E60049E19A /* Assets.xcassets */; };
+		76A7FB91288613E60049E19A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A7FB8F288613E60049E19A /* LaunchScreen.storyboard */; };
+		76A7FB9C288613E60049E19A /* ClevertapiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A7FB9B288613E60049E19A /* ClevertapiOSTests.swift */; };
+		76A7FBA6288613E60049E19A /* ClevertapiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A7FBA5288613E60049E19A /* ClevertapiOSUITests.swift */; };
+		76A7FBA8288613E60049E19A /* ClevertapiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A7FBA7288613E60049E19A /* ClevertapiOSUITestsLaunchTests.swift */; };
+		95FC87BC2AA0EE1F3F9CFA9F /* Pods_ClevertapiOS_ClevertapiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CA8949756A3077FAD5472CC /* Pods_ClevertapiOS_ClevertapiOSUITests.framework */; };
+		D223D46FBE587084C4D68B6E /* Pods_ClevertapiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F0B1E475819C977D794DF84 /* Pods_ClevertapiOS.framework */; };
+		E9DBDB2091EA1853D2536A10 /* Pods_ClevertapiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8371FA5F506F23C13E0B1ABC /* Pods_ClevertapiOSTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		76A7FB98288613E60049E19A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76A7FB79288613E20049E19A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76A7FB80288613E20049E19A;
+			remoteInfo = ClevertapiOS;
+		};
+		76A7FBA2288613E60049E19A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 76A7FB79288613E20049E19A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 76A7FB80288613E20049E19A;
+			remoteInfo = ClevertapiOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F0B1E475819C977D794DF84 /* Pods_ClevertapiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClevertapiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C2B44F66FCAF64689566659 /* Pods-ClevertapiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClevertapiOSTests.release.xcconfig"; path = "Target Support Files/Pods-ClevertapiOSTests/Pods-ClevertapiOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		4EBFBAFC32C07555A04BF176 /* Pods-ClevertapiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClevertapiOSTests.debug.xcconfig"; path = "Target Support Files/Pods-ClevertapiOSTests/Pods-ClevertapiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6CFE992F64682630988A66E5 /* Pods-ClevertapiOS-ClevertapiOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClevertapiOS-ClevertapiOSUITests.release.xcconfig"; path = "Target Support Files/Pods-ClevertapiOS-ClevertapiOSUITests/Pods-ClevertapiOS-ClevertapiOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		76A7FB81288613E20049E19A /* ClevertapiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClevertapiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		76A7FB84288613E20049E19A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		76A7FB86288613E20049E19A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		76A7FB88288613E20049E19A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76A7FB8B288613E20049E19A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		76A7FB8D288613E60049E19A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		76A7FB90288613E60049E19A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76A7FB92288613E60049E19A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76A7FB97288613E60049E19A /* ClevertapiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClevertapiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76A7FB9B288613E60049E19A /* ClevertapiOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClevertapiOSTests.swift; sourceTree = "<group>"; };
+		76A7FBA1288613E60049E19A /* ClevertapiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClevertapiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76A7FBA5288613E60049E19A /* ClevertapiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClevertapiOSUITests.swift; sourceTree = "<group>"; };
+		76A7FBA7288613E60049E19A /* ClevertapiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClevertapiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		76F62AB82888C0E3002F1582 /* ClevertapiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClevertapiOS.entitlements; sourceTree = "<group>"; };
+		7CA8949756A3077FAD5472CC /* Pods_ClevertapiOS_ClevertapiOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClevertapiOS_ClevertapiOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8371FA5F506F23C13E0B1ABC /* Pods_ClevertapiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClevertapiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87133394F7CC4E72976B97A9 /* Pods-ClevertapiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClevertapiOS.release.xcconfig"; path = "Target Support Files/Pods-ClevertapiOS/Pods-ClevertapiOS.release.xcconfig"; sourceTree = "<group>"; };
+		94034F922E9E91BBC7D83239 /* Pods-ClevertapiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClevertapiOS.debug.xcconfig"; path = "Target Support Files/Pods-ClevertapiOS/Pods-ClevertapiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		9DEA89CACD09D6B6ADDE9497 /* Pods-ClevertapiOS-ClevertapiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClevertapiOS-ClevertapiOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-ClevertapiOS-ClevertapiOSUITests/Pods-ClevertapiOS-ClevertapiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76A7FB7E288613E20049E19A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D223D46FBE587084C4D68B6E /* Pods_ClevertapiOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76A7FB94288613E60049E19A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9DBDB2091EA1853D2536A10 /* Pods_ClevertapiOSTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76A7FB9E288613E60049E19A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95FC87BC2AA0EE1F3F9CFA9F /* Pods_ClevertapiOS_ClevertapiOSUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		012F05BAFC96EBAF18E977DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F0B1E475819C977D794DF84 /* Pods_ClevertapiOS.framework */,
+				7CA8949756A3077FAD5472CC /* Pods_ClevertapiOS_ClevertapiOSUITests.framework */,
+				8371FA5F506F23C13E0B1ABC /* Pods_ClevertapiOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76A7FB78288613E20049E19A = {
+			isa = PBXGroup;
+			children = (
+				76A7FB83288613E20049E19A /* ClevertapiOS */,
+				76A7FB9A288613E60049E19A /* ClevertapiOSTests */,
+				76A7FBA4288613E60049E19A /* ClevertapiOSUITests */,
+				76A7FB82288613E20049E19A /* Products */,
+				8F70D96DE0FC7F7F08776FBC /* Pods */,
+				012F05BAFC96EBAF18E977DC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		76A7FB82288613E20049E19A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76A7FB81288613E20049E19A /* ClevertapiOS.app */,
+				76A7FB97288613E60049E19A /* ClevertapiOSTests.xctest */,
+				76A7FBA1288613E60049E19A /* ClevertapiOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76A7FB83288613E20049E19A /* ClevertapiOS */ = {
+			isa = PBXGroup;
+			children = (
+				76F62AB82888C0E3002F1582 /* ClevertapiOS.entitlements */,
+				76A7FB84288613E20049E19A /* AppDelegate.swift */,
+				76A7FB86288613E20049E19A /* SceneDelegate.swift */,
+				76A7FB88288613E20049E19A /* ViewController.swift */,
+				76A7FB8A288613E20049E19A /* Main.storyboard */,
+				76A7FB8D288613E60049E19A /* Assets.xcassets */,
+				76A7FB8F288613E60049E19A /* LaunchScreen.storyboard */,
+				76A7FB92288613E60049E19A /* Info.plist */,
+			);
+			path = ClevertapiOS;
+			sourceTree = "<group>";
+		};
+		76A7FB9A288613E60049E19A /* ClevertapiOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				76A7FB9B288613E60049E19A /* ClevertapiOSTests.swift */,
+			);
+			path = ClevertapiOSTests;
+			sourceTree = "<group>";
+		};
+		76A7FBA4288613E60049E19A /* ClevertapiOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				76A7FBA5288613E60049E19A /* ClevertapiOSUITests.swift */,
+				76A7FBA7288613E60049E19A /* ClevertapiOSUITestsLaunchTests.swift */,
+			);
+			path = ClevertapiOSUITests;
+			sourceTree = "<group>";
+		};
+		8F70D96DE0FC7F7F08776FBC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				94034F922E9E91BBC7D83239 /* Pods-ClevertapiOS.debug.xcconfig */,
+				87133394F7CC4E72976B97A9 /* Pods-ClevertapiOS.release.xcconfig */,
+				9DEA89CACD09D6B6ADDE9497 /* Pods-ClevertapiOS-ClevertapiOSUITests.debug.xcconfig */,
+				6CFE992F64682630988A66E5 /* Pods-ClevertapiOS-ClevertapiOSUITests.release.xcconfig */,
+				4EBFBAFC32C07555A04BF176 /* Pods-ClevertapiOSTests.debug.xcconfig */,
+				3C2B44F66FCAF64689566659 /* Pods-ClevertapiOSTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76A7FB80288613E20049E19A /* ClevertapiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76A7FBAB288613E60049E19A /* Build configuration list for PBXNativeTarget "ClevertapiOS" */;
+			buildPhases = (
+				BF3A544FBD97006A6664C644 /* [CP] Check Pods Manifest.lock */,
+				76A7FB7D288613E20049E19A /* Sources */,
+				76A7FB7E288613E20049E19A /* Frameworks */,
+				76A7FB7F288613E20049E19A /* Resources */,
+				B3FCC752E92BED315FF8DC24 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClevertapiOS;
+			productName = ClevertapiOS;
+			productReference = 76A7FB81288613E20049E19A /* ClevertapiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		76A7FB96288613E60049E19A /* ClevertapiOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76A7FBAE288613E60049E19A /* Build configuration list for PBXNativeTarget "ClevertapiOSTests" */;
+			buildPhases = (
+				ADB8B1C7DDBA7106F9A38C84 /* [CP] Check Pods Manifest.lock */,
+				76A7FB93288613E60049E19A /* Sources */,
+				76A7FB94288613E60049E19A /* Frameworks */,
+				76A7FB95288613E60049E19A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76A7FB99288613E60049E19A /* PBXTargetDependency */,
+			);
+			name = ClevertapiOSTests;
+			productName = ClevertapiOSTests;
+			productReference = 76A7FB97288613E60049E19A /* ClevertapiOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		76A7FBA0288613E60049E19A /* ClevertapiOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76A7FBB1288613E60049E19A /* Build configuration list for PBXNativeTarget "ClevertapiOSUITests" */;
+			buildPhases = (
+				B2D2011BCC8AF3157A82DCB8 /* [CP] Check Pods Manifest.lock */,
+				76A7FB9D288613E60049E19A /* Sources */,
+				76A7FB9E288613E60049E19A /* Frameworks */,
+				76A7FB9F288613E60049E19A /* Resources */,
+				DE5C48137F99171216061050 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				76A7FBA3288613E60049E19A /* PBXTargetDependency */,
+			);
+			name = ClevertapiOSUITests;
+			productName = ClevertapiOSUITests;
+			productReference = 76A7FBA1288613E60049E19A /* ClevertapiOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76A7FB79288613E20049E19A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					76A7FB80288613E20049E19A = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					76A7FB96288613E60049E19A = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 76A7FB80288613E20049E19A;
+					};
+					76A7FBA0288613E60049E19A = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = 76A7FB80288613E20049E19A;
+					};
+				};
+			};
+			buildConfigurationList = 76A7FB7C288613E20049E19A /* Build configuration list for PBXProject "ClevertapiOS" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 76A7FB78288613E20049E19A;
+			productRefGroup = 76A7FB82288613E20049E19A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76A7FB80288613E20049E19A /* ClevertapiOS */,
+				76A7FB96288613E60049E19A /* ClevertapiOSTests */,
+				76A7FBA0288613E60049E19A /* ClevertapiOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76A7FB7F288613E20049E19A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76A7FB91288613E60049E19A /* LaunchScreen.storyboard in Resources */,
+				76A7FB8E288613E60049E19A /* Assets.xcassets in Resources */,
+				76A7FB8C288613E20049E19A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76A7FB95288613E60049E19A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76A7FB9F288613E60049E19A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ADB8B1C7DDBA7106F9A38C84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClevertapiOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2D2011BCC8AF3157A82DCB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClevertapiOS-ClevertapiOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3FCC752E92BED315FF8DC24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ClevertapiOS/Pods-ClevertapiOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ClevertapiOS/Pods-ClevertapiOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ClevertapiOS/Pods-ClevertapiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF3A544FBD97006A6664C644 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ClevertapiOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE5C48137F99171216061050 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ClevertapiOS-ClevertapiOSUITests/Pods-ClevertapiOS-ClevertapiOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ClevertapiOS-ClevertapiOSUITests/Pods-ClevertapiOS-ClevertapiOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ClevertapiOS-ClevertapiOSUITests/Pods-ClevertapiOS-ClevertapiOSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76A7FB7D288613E20049E19A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76A7FB89288613E20049E19A /* ViewController.swift in Sources */,
+				76A7FB85288613E20049E19A /* AppDelegate.swift in Sources */,
+				76A7FB87288613E20049E19A /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76A7FB93288613E60049E19A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76A7FB9C288613E60049E19A /* ClevertapiOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76A7FB9D288613E60049E19A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76A7FBA6288613E60049E19A /* ClevertapiOSUITests.swift in Sources */,
+				76A7FBA8288613E60049E19A /* ClevertapiOSUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		76A7FB99288613E60049E19A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76A7FB80288613E20049E19A /* ClevertapiOS */;
+			targetProxy = 76A7FB98288613E60049E19A /* PBXContainerItemProxy */;
+		};
+		76A7FBA3288613E60049E19A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 76A7FB80288613E20049E19A /* ClevertapiOS */;
+			targetProxy = 76A7FBA2288613E60049E19A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		76A7FB8A288613E20049E19A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76A7FB8B288613E20049E19A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		76A7FB8F288613E60049E19A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76A7FB90288613E60049E19A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76A7FBA9288613E60049E19A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		76A7FBAA288613E60049E19A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		76A7FBAC288613E60049E19A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94034F922E9E91BBC7D83239 /* Pods-ClevertapiOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ClevertapiOS/ClevertapiOS.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XM67G79YA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ClevertapiOS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.clevertappoc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		76A7FBAD288613E60049E19A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87133394F7CC4E72976B97A9 /* Pods-ClevertapiOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ClevertapiOS/ClevertapiOS.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7XM67G79YA;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ClevertapiOS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.clevertappoc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		76A7FBAF288613E60049E19A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EBFBAFC32C07555A04BF176 /* Pods-ClevertapiOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4XLWYATZ5P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hadia.ClevertapiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClevertapiOS.app/ClevertapiOS";
+			};
+			name = Debug;
+		};
+		76A7FBB0288613E60049E19A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C2B44F66FCAF64689566659 /* Pods-ClevertapiOSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4XLWYATZ5P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hadia.ClevertapiOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClevertapiOS.app/ClevertapiOS";
+			};
+			name = Release;
+		};
+		76A7FBB2288613E60049E19A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DEA89CACD09D6B6ADDE9497 /* Pods-ClevertapiOS-ClevertapiOSUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4XLWYATZ5P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hadia.ClevertapiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClevertapiOS;
+			};
+			name = Debug;
+		};
+		76A7FBB3288613E60049E19A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CFE992F64682630988A66E5 /* Pods-ClevertapiOS-ClevertapiOSUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4XLWYATZ5P;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hadia.ClevertapiOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ClevertapiOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76A7FB7C288613E20049E19A /* Build configuration list for PBXProject "ClevertapiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76A7FBA9288613E60049E19A /* Debug */,
+				76A7FBAA288613E60049E19A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76A7FBAB288613E60049E19A /* Build configuration list for PBXNativeTarget "ClevertapiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76A7FBAC288613E60049E19A /* Debug */,
+				76A7FBAD288613E60049E19A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76A7FBAE288613E60049E19A /* Build configuration list for PBXNativeTarget "ClevertapiOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76A7FBAF288613E60049E19A /* Debug */,
+				76A7FBB0288613E60049E19A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76A7FBB1288613E60049E19A /* Build configuration list for PBXNativeTarget "ClevertapiOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76A7FBB2288613E60049E19A /* Debug */,
+				76A7FBB3288613E60049E19A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 76A7FB79288613E20049E19A /* Project object */;
+}
