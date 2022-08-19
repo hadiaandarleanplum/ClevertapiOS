@@ -27,11 +27,6 @@ class ViewController: UIViewController {
         
         CleverTap.sharedInstance()?.recordEvent("User Logged In");
     }
-    
-    func application(application: UIApplication,
-                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-        CleverTap.sharedInstance()?.setPushToken(deviceToken as Data)
-    }
 
 
 }
