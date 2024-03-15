@@ -11,15 +11,21 @@ import CleverTapSDK
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         CleverTap.autoIntegrate()
         UIApplication.shared.registerForRemoteNotifications()
         registerForPushNotifications()
+        CleverTap.sharedInstance()?.prompt(forPushPermission: true)
         return true
     }
+    
+    //Deeplinking'
+    /*func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        print(url)
+        return true
+    }*/
+    
     
     //ask for push auth from user
     func registerForPushNotifications() {
@@ -39,7 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CleverTap.sharedInstance()?.setPushToken(deviceToken as Data)
     }
     
-    //check if device is registered for push notifications
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
             NSLog("%@: failed to register for remote notifications: %@", self.description, error.localizedDescription)
         }
@@ -47,68 +52,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
             NSLog("%@: registered for remote notifications: %@", self.description, deviceToken.description)
         }
-    
-    //track notification opens and fire attached deep links
-//    /** For iOS 10 and above - Background **/
-//    func userNotificationCenter(_ center: UNUserNotificationCenter,
-//                                    didReceive response: UNNotificationResponse,
-//                                    withCompletionHandler completionHandler: @escaping () -> Void) {
-//
-//        /**
-//         Use this method to perform the tasks associated with your app’s custom actions. When the user responds to a notification, the system calls this method with the results. You use this method to perform the task associated with that action, if at all. At the end of your implementation, you must call the completionHandler block to let the system know that you are done processing the notification.
-//
-//         You specify your app’s notification types and custom actions using UNNotificationCategory and UNNotificationAction objects. You create these objects at initialization time and register them with the user notification center. Even if you register custom actions, the action in the response parameter might indicate that the user dismissed the notification without performing any of your actions.
-//
-//         If you do not implement this method, your app never responds to custom actions.
-//
-//         see https://developer.apple.com/reference/usernotifications/unusernotificationcenterdelegate/1649501-usernotificationcenter
-//
-//         **/
-//
-//        // if you wish CleverTap to record the notification open and fire any deep links contained in the payload. Skip this line if you have opted for auto-integrate.
-//        CleverTap.sharedInstance()?.handleNotification(withData: response.notification.request.content.userInfo)
-//
-//        completionHandler()
-//
-//    }
-//
-//    /** For iOS 10 and above - Foreground**/
-//
-//    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: (UNNotificationPresentationOptions) -> Void) {
-//
-//           /**
-//         Use this method to perform the tasks associated with your app's custom actions. When the user responds to a notification, the system calls this method with the results. You use this method to perform the task associated with that action, if at all. At the end of your implementation, you must call the completionHandler block to let the system know that you are done processing the notification.
-//
-//         You specify your app's notification types and custom actions using UNNotificationCategory and UNNotificationAction objects.
-//         You create these objects at initialization time and register them with the user notification center. Even if you register custom actions, the action in the response parameter might indicate that the user dismissed the notification without performing any of your actions.
-//
-//         If you do not implement this method, your app never responds to custom actions.
-//
-//         see https://developer.apple.com/reference/usernotifications/unusernotificationcenterdelegate/1649501-usernotificationcenter
-//         **/
-//
-//        print("APPDELEGATE: didReceiveResponseWithCompletionHandler \(response.notification.request.content.userInfo)")
-//
-//        // If you wish CleverTap to record the notification click and fire any deep links contained in the payload.
-//
-//         CleverTap.sharedInstance()?.handleNotification(withData: notification.request.content.userInfo, openDeepLinksInForeground: true)
-//         completionHandler([.badge, .sound, .alert])
-//    }
-    
-    //push notification callback
-    func pushNotificationTapped(withCustomExtras customExtras: [AnyHashable : Any]!) {
-          print("Push Notification Tapped with Custom Extras: \(customExtras)")
-          
-    }
-    
-    //push impressions
-//    override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void) {
-//            // While running the Application add CleverTap Account ID and Account token in your .plist file
-//            
-//            // call to record the Notification viewed
-//            CleverTap.sharedInstance()?.recordNotificationViewedEvent(withData: request.content.userInfo)
-//            super.didReceive(request, withContentHandler: contentHandler)
-//        }
+        
+        func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                    didReceive response: UNNotificationResponse,
+                                    withCompletionHandler completionHandler: @escaping () -> Void) {
+            
+            NSLog("%@: did receive notification response: %@", self.description, response.notification.request.content.userInfo)
+            completionHandler()
+        }
+        
+        func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                    willPresent notification: UNNotification,
+                                    withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+            
+            NSLog("%@: will present notification: %@", self.description, notification.request.content.userInfo)
+            CleverTap.sharedInstance()?.recordNotificationViewedEvent(withData: notification.request.content.userInfo)
+            completionHandler([.badge, .sound, .list, .banner])
+        }
+        
+        func application(_ application: UIApplication,
+                         didReceiveRemoteNotification userInfo: [AnyHashable : Any],
+                         fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+            NSLog("%@: did receive remote notification completionhandler: %@", self.description, userInfo)
+            completionHandler(UIBackgroundFetchResult.noData)
+        }
+        
+        func pushNotificationTapped(withCustomExtras customExtras: [AnyHashable : Any]!) {
+            NSLog("pushNotificationTapped: customExtras: ", customExtras)
+        }
 
     // MARK: UISceneSession Lifecycle
 
