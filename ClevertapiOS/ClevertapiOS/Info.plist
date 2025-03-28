@@ -16,9 +16,9 @@
 		</dict>
 	</array>
 	<key>CleverTapAccountID</key>
-	<string>WRZ-KK5-656Z</string>
+	<string>RKR-Z99-876Z</string>
 	<key>CleverTapToken</key>
-	<string>533-120</string>
+	<string>cc1-232</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -38,5 +38,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 </dict>
 </plist>

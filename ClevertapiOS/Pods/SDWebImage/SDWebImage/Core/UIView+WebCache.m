@@ -13,6 +13,7 @@
 #import "SDInternalMacros.h"
 #import "SDWebImageTransitionInternal.h"
 #import "SDImageCache.h"
+#import "SDCallbackQueue.h"
 
 const int64_t SDWebImageProgressUnitCountUnknown = 1LL;
 
@@ -61,6 +62,18 @@ const int64_t SDWebImageProgressUnitCountUnknown = 1LL;
                                                  setImageBlock:(nullable SDSetImageBlock)setImageBlock
                                                       progress:(nullable SDImageLoaderProgressBlock)progressBlock
                                                      completed:(nullable SDInternalCompletionBlock)completedBlock {
+    
+    // Very common mistake is to send the URL using NSString object instead of NSURL. For some strange reason, Xcode won't
+    // throw any warning for this type mismatch. Here we failsafe this error by allowing URLs to be passed as NSString.
+    //  if url is NSString and shouldUseWeakMemoryCache is true, [cacheKeyForURL:context] will crash. just for a  global protect.
+    if ([url isKindOfClass:NSString.class]) {
+        url = [NSURL URLWithString:(NSString *)url];
+    }
+    // Prevents app crashing on argument type error like sending NSNull instead of NSURL
+    if (![url isKindOfClass:NSURL.class]) {
+        url = nil;
+    }
+    
     if (context) {
         // copy to avoid mutable object
         context = [context copy];
@@ -96,7 +109,7 @@ const int64_t SDWebImageProgressUnitCountUnknown = 1LL;
         mutableContext[SDWebImageContextCustomManager] = nil;
         context = [mutableContext copy];
     }
-    
+    SDCallbackQueue *queue = context[SDWebImageContextCallbackQueue];
     BOOL shouldUseWeakCache = NO;
     if ([manager.imageCache isKindOfClass:SDImageCache.class]) {
         shouldUseWeakCache = ((SDImageCache *)manager.imageCache).config.shouldUseWeakMemoryCache;
@@ -109,9 +122,9 @@ const int64_t SDWebImageProgressUnitCountUnknown = 1LL;
             // in the future the weak cache feature may be re-design or removed
             [((SDImageCache *)manager.imageCache) imageFromMemoryCacheForKey:key];
         }
-        dispatch_main_async_safe(^{
+        [(queue ?: SDCallbackQueue.mainQueue) async:^{
             [self sd_setImage:placeholder imageData:nil basedOnClassOrViaCustomSetImageBlock:setImageBlock cacheType:SDImageCacheTypeNone imageURL:url];
-        });
+        }];
     }
     
     id <SDWebImageOperation> operation = nil;
@@ -126,7 +139,7 @@ const int64_t SDWebImageProgressUnitCountUnknown = 1LL;
         
 #if SD_UIKIT || SD_MAC
         // check and start image indicator
-        [self sd_startImageIndicator];
+        [self sd_startImageIndicatorWithQueue:queue];
         id<SDWebImageIndicator> imageIndicator = self.sd_imageIndicator;
 #endif
         
@@ -164,7 +177,7 @@ const int64_t SDWebImageProgressUnitCountUnknown = 1LL;
 #if SD_UIKIT || SD_MAC
             // check and stop image indicator
             if (finished) {
-                [self sd_stopImageIndicator];
+                [self sd_stopImageIndicatorWithQueue:queue];
             }
 #endif
             
@@ -185,7 +198,7 @@ const int64_t SDWebImageProgressUnitCountUnknown = 1LL;
             // OR
             // case 1b: we got no image and the SDWebImageDelayPlaceholder is not set
             if (shouldNotSetImage) {
-                dispatch_main_async_safe(callCompletedBlockClosure);
+                [(queue ?: SDCallbackQueue.mainQueue) async:callCompletedBlockClosure];
                 return;
             }
             
@@ -230,25 +243,25 @@ const int64_t SDWebImageProgressUnitCountUnknown = 1LL;
                 transition = self.sd_imageTransition;
             }
 #endif
-            dispatch_main_async_safe(^{
+            [(queue ?: SDCallbackQueue.mainQueue) async:^{
 #if SD_UIKIT || SD_MAC
                 [self sd_setImage:targetImage imageData:targetData options:options basedOnClassOrViaCustomSetImageBlock:setImageBlock transition:transition cacheType:cacheType imageURL:imageURL callback:callCompletedBlockClosure];
 #else
                 [self sd_setImage:targetImage imageData:targetData basedOnClassOrViaCustomSetImageBlock:setImageBlock cacheType:cacheType imageURL:imageURL];
                 callCompletedBlockClosure();
 #endif
-            });
+            }];
         }];
         [self sd_setImageLoadOperation:operation forKey:validOperationKey];
     } else {
 #if SD_UIKIT || SD_MAC
-        [self sd_stopImageIndicator];
+        [self sd_stopImageIndicatorWithQueue:queue];
 #endif
         if (completedBlock) {
-            dispatch_main_async_safe(^{
+            [(queue ?: SDCallbackQueue.mainQueue) async:^{
                 NSError *error = [NSError errorWithDomain:SDWebImageErrorDomain code:SDWebImageErrorInvalidURL userInfo:@{NSLocalizedDescriptionKey : @"Image url is nil"}];
                 completedBlock(nil, nil, error, SDImageCacheTypeNone, YES, url);
-            });
+            }];
         }
     }
     
@@ -470,24 +483,24 @@ const int64_t SDWebImageProgressUnitCountUnknown = 1LL;
     [self addSubview:view];
 }
 
-- (void)sd_startImageIndicator {
+- (void)sd_startImageIndicatorWithQueue:(SDCallbackQueue *)queue {
     id<SDWebImageIndicator> imageIndicator = self.sd_imageIndicator;
     if (!imageIndicator) {
         return;
     }
-    dispatch_main_async_safe(^{
+    [(queue ?: SDCallbackQueue.mainQueue) async:^{
         [imageIndicator startAnimatingIndicator];
-    });
+    }];
 }
 
-- (void)sd_stopImageIndicator {
+- (void)sd_stopImageIndicatorWithQueue:(SDCallbackQueue *)queue {
     id<SDWebImageIndicator> imageIndicator = self.sd_imageIndicator;
     if (!imageIndicator) {
         return;
     }
-    dispatch_main_async_safe(^{
+    [(queue ?: SDCallbackQueue.mainQueue) async:^{
         [imageIndicator stopAnimatingIndicator];
-    });
+    }];
 }
 
 #endif

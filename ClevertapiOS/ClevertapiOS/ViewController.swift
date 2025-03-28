@@ -9,24 +9,42 @@ import UIKit
 import CleverTapSDK
 
 class ViewController: UIViewController, CleverTapDisplayUnitDelegate, CleverTapPushPermissionDelegate {
+    
+    var clevertapID: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        if let clevertapInstance = CleverTap.sharedInstance() {
+            // Fetch CleverTap ID
+            if let cleverTapID = clevertapInstance.profileGetID() {
+                // Use the retrieved CleverTap ID
+                print("CleverTap Device ID: \(cleverTapID)")
+            } else {
+                print("CleverTap Device ID could not be retrieved")
+            }
+        } else {
+            print("Failed to initialize CleverTap instance")
+        }
+        
         CleverTap.setDebugLevel(CleverTapLogLevel.debug.rawValue)
         
         CleverTap.sharedInstance()?.setDisplayUnitDelegate(self)
         
+        clevertapID = CleverTap.sharedInstance()?.profileGetID() ?? ""
+        print("THIS IS MY CLEVERTAP ID ", clevertapID)
+        
         let profile = [
             //Update pre-defined profile properties
-            "Name": "Apple Montana2",
-            "Email": "Apple.montana2@gmail.com",
-            "Identity": 71026033,
-            "Phone": "+14155551234",      // Phone (with the country code, starting with +)
+            "Name": "Anon user",
+            //"Email": "hadiaTestiOS3@gmail.com",
+            "Identity": "TEST",
+            //"Phone": "+14155551234",      // Phone (with the country code, starting with +)
             //Update custom profile properties
-            "Plan type": "Silver",
+            "Plan type": "yellow",
             "Favorite Food": "Pizza",
-            "App install": "Jan 17 2023"
+            "App install": "Jan 17 2023",
         ] as [String : Any]
         
         /*let profile = [
@@ -40,11 +58,14 @@ class ViewController: UIViewController, CleverTapDisplayUnitDelegate, CleverTapP
             "Favorite Food": "Pizza",
             "App install": "Jan 18 2023"
         ] as [String : Any]*/
+        
+        //CleverTap.sharedInstance()?.profilePush(profile)
 
         CleverTap.sharedInstance()?.onUserLogin(profile)
         CleverTap.sharedInstance()?.setPushPermissionDelegate(self)
         
         CleverTap.sharedInstance()?.recordEvent("User Logged In");
+        
         
         // event with properties
         let props = [
